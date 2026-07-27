@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Btn from "../../utils/Btn";
 
 export default function Banner() {
@@ -24,17 +25,17 @@ export default function Banner() {
           </h1>
           <p className="text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
             Watch your favorite turf matches live on Facebook & YouTube. Get
-            instant highlights, replays, and full match recordings — all in one
+            instant highlights, replays, and full match recordings - all in one
             place with TurfCast.
           </p>
         </div>
 
-        
-        <span className=" flex items-center gap-2 group">
-          <Btn className="border-4">Take Our Service</Btn>
-        </span>
+        <Link to="/services">
+          <span className=" flex items-center gap-2 group">
+            <Btn className="border-4">Take Our Service</Btn>
+          </span>
+        </Link>
 
-        
         {/* Stats Section */}
         <div className="flex justify-center lg:justify-start">
           <div className="flex bg-white text-black flex-row items-center gap-6 rounded-md shadow-lg p-4 sm:p-6 w-72 h-20 sm:w-fit sm:h-fit mx-auto lg:mx-0 absolute top-60 lg:top-74">
@@ -55,7 +56,8 @@ export default function Banner() {
             <div className="text-center">
               <h2 className="font-bold text-2xl sm:text-4xl">10+</h2>
               <p className="text-xs sm:text-sm font-medium opacity-70">
-                <span className="whitespace-nowrap">Turf Locations</span> Covered
+                <span className="whitespace-nowrap">Turf Locations</span>{" "}
+                Covered
               </p>
             </div>
           </div>

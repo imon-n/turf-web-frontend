@@ -36,14 +36,11 @@ export default function Service() {
   const containerRef = useRef(null);
 
   const locations = [
-    "Dhaka",
-    "Chittagong",
-    "Rajshahi",
-    "Sylhet",
-    "Khulna",
-    "Barishal",
-    "Rangpur",
-    "Mymensingh",
+    "GEC Turf",
+    "Khulshi Sports Arena",
+    "Nasirabad Football Turf",
+    "Oxygen Football Ground",
+    "Agrabad Sports Arena",
   ];
 
   const today = new Date();
@@ -57,17 +54,13 @@ export default function Service() {
       const start = h;
       const end = (h % 12) + 1;
       return `${start}:00 - ${end}:00 ${period}`;
-    })
+    }),
   );
 
   const packages = [
-    { id: "L", label: "Live Coverage", price: 150, icon: "📡" },
     { id: "R", label: "Recording", price: 120, icon: "🎥" },
     { id: "H", label: "Highlights", price: 180, icon: "⚡" },
-    { id: "LR", label: "Live + Record", price: 225, icon: "🎬" },
-    { id: "LH", label: "Live + Highlights", price: 270, icon: "✨" },
     { id: "RH", label: "Record + Highlights", price: 240, icon: "🌟" },
-    { id: "LRH", label: "Complete Package", price: 330, icon: "🏆" },
   ];
 
   useEffect(() => {
@@ -97,7 +90,7 @@ export default function Service() {
         selectedPackage
           ? `${selectedPackage.label} (${selectedPackage.price} Tk)`
           : "—"
-      }`
+      }`,
     );
   };
 
@@ -195,7 +188,7 @@ export default function Service() {
                                 .filter((loc) =>
                                   loc
                                     .toLowerCase()
-                                    .includes((query || "").toLowerCase())
+                                    .includes((query || "").toLowerCase()),
                                 )
                                 .map((loc, i) => (
                                   <li
@@ -317,7 +310,7 @@ export default function Service() {
             </div>
 
             {/* Submit Button */}
-            <div className="flex justify-center pt-4">
+            <div className="flex justify-center pt-4 pb-4">
               <button
                 onClick={handleSubmit(onSubmit)}
                 className="group relative px-12 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-xl font-bold text-white text-lg uppercase tracking-wider hover:from-amber-400 hover:to-yellow-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-300/50 transition-all duration-300 overflow-hidden"
@@ -336,8 +329,9 @@ export default function Service() {
         {/* Footer Note */}
         <div className="text-center mt-8">
           <p className="text-gray-600 text-sm">
-            💡 Once you click "Pay Now", our team will contact you shortly to confirm your booking
-            and provide payment instructions. Thank you for choosing our service!
+            💡 Once you click "Pay Now", our team will contact you shortly to
+            confirm your booking and provide payment instructions. Thank you for
+            choosing our service!
           </p>
         </div>
       </div>
