@@ -5,7 +5,6 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Contact from "../pages/Contact/Contact";
 import ServicesPage from "../pages/Services/ServicesPage";
 import AboutPage from "../pages/About/AboutPage";
-import StreamAI from "../pages/StreamAI/StreamAI";
 import Stream from "../pages/Stream/Stream";
 
 
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         Component: Contact,
-      },
-      {
-        path: "/streamAI",
-        Component: StreamAI,
       },
       {
         path: "/stream",

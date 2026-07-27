@@ -32,9 +32,6 @@ export default function Banner() {
         
         <span className=" flex items-center gap-2 group">
           <Btn className="border-4">Take Our Service</Btn>
-          <span className="group-hover:translate-x-1 transition-transform">
-            →
-          </span>
         </span>
 
         

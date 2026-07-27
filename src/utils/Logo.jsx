@@ -4,11 +4,8 @@ export default function Logo() {
       <img
         src="/logo1.png" 
         alt="TurfCast logo"
-        className="w-12 h-16 object-contain text-white"
+        className="w-24 h-16 object-contain text-white"
       />
-      <span>
-        <span className="text-yellow-400">Turf</span>Cast
-      </span>
     </div>
   );
 }

@@ -54,10 +54,10 @@ export default function Stream() {
       <div className="flex flex-wrap justify-center gap-4">
         <button
           onClick={() => handleGoLive("facebook")}
-          className={`relative group overflow-hidden px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 ${
+          className={`relative group overflow-hidden px-4 py-4 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 ${
             isStreaming.facebook
-              ? "bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/50"
-              : "bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-blue-500/50"
+              ? "bg-yellow-700 hover:bg-yellow-600 text-white shadow-lg shadow-blue-500/50"
+              : "bg-yellow-700 hover:bg-yellow-700 text-white shadow-lg hover:shadow-blue-500/50"
           } hover:scale-105`}
         >
           <Facebook className="w-4 h-4" />
