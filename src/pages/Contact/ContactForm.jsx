@@ -51,8 +51,8 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="block mb-1">
-            Phone Number (optional)
+          <label className="block mb-1 whitespace-nowrap">
+            Phone NO. (optional)
           </label>
           <input
             type="tel"

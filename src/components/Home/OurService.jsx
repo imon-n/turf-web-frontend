@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import Title from "../../utils/Title";
 import { Video, Film, Star } from "lucide-react";
+import Btn from "../../utils/Btn";
 
 export default function OurService() {
   const services = [
@@ -55,10 +56,11 @@ export default function OurService() {
                 {service.available ? (
                   <div className="flex  justify-center">
                     <Link
-                      to="/services"
-                      className="block w-full py-3 text-sm font-medium bg-yellow-400 text-black rounded-md hover:bg-yellow-300 transition"
+                      to="/book-slot"
+                      
                     >
-                      Take Service
+                      
+                      <Btn>Take Service</Btn>
                     </Link>
                   </div>
                 ) : (
