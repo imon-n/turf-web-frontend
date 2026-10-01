@@ -1,0 +1,1 @@
+import BookASlot from "../../../src/pages/BookASlot/BookASlot"; export default function Page(){return <BookASlot/>;}
