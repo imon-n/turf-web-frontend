@@ -1,0 +1,1 @@
+import Turfs from "../../src/pages/Turfs/Turfs"; export default function Page(){return <Turfs/>;}
