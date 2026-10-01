@@ -1,3 +1,5 @@
+"use client";
+
 import { useForm } from "react-hook-form";
 import { FaArrowRight } from "react-icons/fa";
 
