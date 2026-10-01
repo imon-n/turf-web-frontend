@@ -1,0 +1,1 @@
+import Login from "../../src/pages/login/Login"; export default function Page(){return <Login/>;}
