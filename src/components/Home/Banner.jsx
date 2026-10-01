@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import Link from "next/link";
 import Btn from "../../utils/Btn";
 
 export default function Banner() {
@@ -34,7 +34,7 @@ export default function Banner() {
             </p>
 
             <div className="flex justify-center pt-2 lg:justify-start">
-              <Link to="/book-slot">
+              <Link href="/book-slot">
                 <span className="group relative inline-block whitespace-nowrap">
                   <Btn
                     className="
