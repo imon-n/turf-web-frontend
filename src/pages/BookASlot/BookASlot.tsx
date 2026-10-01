@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "next/link";
+import { useNavigate, useParams } from "next/navigation";
 import { CalendarDays, MapPin, Clock, CreditCard } from "lucide-react";
 
 interface Turf {
