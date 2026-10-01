@@ -1,0 +1,1 @@
+import Contact from "../../src/pages/Contact/Contact"; export default function Page(){return <Contact/>;}
