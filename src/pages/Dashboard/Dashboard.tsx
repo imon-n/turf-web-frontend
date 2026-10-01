@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import {
   CalendarDays,
@@ -17,7 +18,7 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import useAuth from "../../hooks/useAuth";
 import useUserRole from "../../hooks/useUserRole";
 
@@ -124,7 +125,7 @@ const Dashboard = () => {
           {/* Logo */}
           <div className="flex h-20 items-center justify-between border-b border-white/10 px-6">
             <Link
-              to="/"
+              href="/"
               className="flex items-center"
               onClick={() => setSidebarOpen(false)}
             >
@@ -174,7 +175,7 @@ const Dashboard = () => {
                 return (
                   <Link
                     key={item.name}
-                    to={item.path}
+                    href={item.path}
                     onClick={() => setSidebarOpen(false)}
                     className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition ${
                       item.active
@@ -194,7 +195,7 @@ const Dashboard = () => {
             </p>
 
             <Link
-              to="/dashboard/settings"
+              href="/dashboard/settings"
               onClick={() => setSidebarOpen(false)}
               className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-gray-300 transition hover:bg-white/10 hover:text-white"
             >
@@ -275,7 +276,7 @@ const Dashboard = () => {
                 </div>
 
                 <Link
-                  to="/dashboard/profile"
+                  href="/dashboard/profile"
                   onClick={() => setProfileOpen(false)}
                   className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50"
                 >
@@ -284,7 +285,7 @@ const Dashboard = () => {
                 </Link>
 
                 <Link
-                  to="/dashboard/settings"
+                  href="/dashboard/settings"
                   onClick={() => setProfileOpen(false)}
                   className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50"
                 >
@@ -323,7 +324,7 @@ const Dashboard = () => {
               </p>
 
               <Link
-                to="/book-slot"
+                href="/book-slot"
                 className="mt-6 inline-flex items-center gap-2 rounded-xl bg-yellow-400 px-5 py-3 text-sm font-bold text-black transition hover:bg-yellow-300"
               >
                 Book a Slot
@@ -378,7 +379,7 @@ const Dashboard = () => {
                 </div>
 
                 <Link
-                  to="/dashboard/my-turf"
+                  href="/dashboard/my-turf"
                   className="hidden items-center gap-2 rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 sm:flex"
                 >
                   Manage Turf
@@ -394,7 +395,7 @@ const Dashboard = () => {
               </div>
 
               <Link
-                to="/dashboard/my-turf"
+                href="/dashboard/my-turf"
                 className="mt-5 flex items-center justify-center gap-2 rounded-xl bg-black px-4 py-3 text-sm font-semibold text-white sm:hidden"
               >
                 Manage Turf
@@ -423,7 +424,7 @@ const Dashboard = () => {
 
               <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <Link
-                  to="/dashboard/users"
+                  href="/dashboard/users"
                   className="flex items-center justify-between rounded-xl border border-gray-200 p-4 transition hover:border-yellow-400 hover:bg-yellow-50"
                 >
                   <div className="flex items-center gap-3">
@@ -436,7 +437,7 @@ const Dashboard = () => {
                 </Link>
 
                 <Link
-                  to="/dashboard/turfs"
+                  href="/dashboard/turfs"
                   className="flex items-center justify-between rounded-xl border border-gray-200 p-4 transition hover:border-yellow-400 hover:bg-yellow-50"
                 >
                   <div className="flex items-center gap-3">
@@ -464,7 +465,7 @@ const Dashboard = () => {
                 </div>
 
                 <Link
-                  to="/dashboard/bookings"
+                  href="/dashboard/bookings"
                   className="text-sm font-semibold text-gray-700 hover:text-black"
                 >
                   View All
@@ -491,7 +492,7 @@ const Dashboard = () => {
                 </div>
 
                 <Link
-                  to="/dashboard/matches"
+                  href="/dashboard/matches"
                   className="text-sm font-semibold text-gray-700 hover:text-black"
                 >
                   View All
@@ -626,7 +627,7 @@ const EmptyState = ({
       </p>
 
       <Link
-        to={path}
+        href={path}
         className="mt-4 inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-gray-800"
       >
         {buttonText}
@@ -647,7 +648,7 @@ const QuickAction = ({
 }) => {
   return (
     <Link
-      to={path}
+      href={path}
       className="group flex items-center justify-between rounded-xl border border-gray-200 p-4 transition hover:border-yellow-400 hover:bg-yellow-50"
     >
       <div className="flex items-center gap-3">
