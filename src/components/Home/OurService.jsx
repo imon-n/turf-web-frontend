@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import Link from "next/link";
 import Title from "../../utils/Title";
 import { Video, Film, Star } from "lucide-react";
 import Btn from "../../utils/Btn";
@@ -56,7 +56,7 @@ export default function OurService() {
                 {service.available ? (
                   <div className="flex  justify-center">
                     <Link
-                      to="/book-slot"
+                      href="/book-slot"
                       
                     >
                       
