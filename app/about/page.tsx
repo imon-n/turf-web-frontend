@@ -1,0 +1,1 @@
+import AboutPage from "../../src/pages/About/AboutPage"; export default function Page(){return <AboutPage/>;}
