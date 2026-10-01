@@ -1,8 +1,8 @@
-import { Link } from "react-router";
+import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link to="/" className="flex items-center">
+    <Link href="/" className="flex items-center">
       <img
         src="/logo1.png"
         alt="TurfCast logo"

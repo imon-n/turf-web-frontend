@@ -1,6 +1,8 @@
+"use client";
+
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineDown } from "react-icons/ai";
-import { NavLink } from "react-router";
+import Link from "next/link";
 import Logo from "../../../utils/Logo";
 import useAuth from "../../../hooks/useAuth";
 
@@ -44,16 +46,12 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center space-x-8 font-medium">
           {navLinks.map((link) => (
             <li key={link.path}>
-              <NavLink
-                to={link.path}
-                className={({ isActive }) =>
-                  `transition-colors duration-300 ${
-                    isActive ? "text-yellow-400" : "hover:text-yellow-400"
-                  }`
-                }
+              <Link
+                href={link.path}
+                className="transition-colors duration-300 hover:text-yellow-400"
               >
                 {link.name.toUpperCase()}
-              </NavLink>
+              </Link>
             </li>
           ))}
 
@@ -75,20 +73,14 @@ export default function Navbar() {
             {isExploreOpen && (
               <div className="absolute top-full right-0 mt-4 w-52 bg-white text-gray-800 rounded-lg shadow-xl overflow-hidden">
                 {exploreLinks.map((link) => (
-                  <NavLink
+                  <Link
                     key={link.path}
-                    to={link.path}
+                    href={link.path}
                     onClick={() => setIsExploreOpen(false)}
-                    className={({ isActive }) =>
-                      `block px-5 py-3 text-sm transition-colors ${
-                        isActive
-                          ? "bg-yellow-400 text-black"
-                          : "hover:bg-yellow-50 hover:text-yellow-600"
-                      }`
-                    }
+                    className="block px-5 py-3 text-sm transition-colors hover:bg-yellow-50 hover:text-yellow-600"
                   >
                     {link.name}
-                  </NavLink>
+                  </Link>
                 ))}
               </div>
             )}
@@ -108,20 +100,20 @@ export default function Navbar() {
 
               {/* Logout */}
               {/* Dashboard */}
-              <NavLink
-                to="/dashboard"
+              <Link
+                href="/dashboard"
                 className="hidden sm:block px-4 py-2 text-sm font-medium bg-yellow-500 text-black hover:bg-amber-600 hover:text-white rounded-md  transition"
               >
                 Dashboard
-              </NavLink>
+              </Link>
             </>
           ) : (
-            <NavLink
-              to="/login"
+            <Link
+              href="/login"
               className="hidden sm:block px-4 py-2 text-sm font-medium bg-yellow-400 text-black rounded-md hover:bg-yellow-300 transition"
             >
               Login
-            </NavLink>
+            </Link>
           )}
 
           {/* Mobile Toggle */}
@@ -143,14 +135,14 @@ export default function Navbar() {
         <div className="md:hidden bg-black text-white flex flex-col px-6 py-6 absolute w-full shadow-lg">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <NavLink
+              <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 className="hover:text-yellow-400 transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name.toUpperCase()}
-              </NavLink>
+              </Link>
             ))}
 
             {/* Mobile Explore */}
@@ -171,9 +163,9 @@ export default function Navbar() {
             {isExploreOpen && (
               <div className="ml-4 flex flex-col gap-3 border-l border-gray-700 pl-4">
                 {exploreLinks.map((link) => (
-                  <NavLink
+                  <Link
                     key={link.path}
-                    to={link.path}
+                    href={link.path}
                     onClick={() => {
                       setIsExploreOpen(false);
                       setIsOpen(false);
@@ -181,7 +173,7 @@ export default function Navbar() {
                     className="text-sm text-gray-300 hover:text-yellow-400 transition"
                   >
                     {link.name}
-                  </NavLink>
+                  </Link>
                 ))}
               </div>
             )}
@@ -197,13 +189,13 @@ export default function Navbar() {
                 Logout
               </button>
             ) : (
-              <NavLink
-                to="/login"
+              <Link
+                href="/login"
                 onClick={() => setIsOpen(false)}
                 className="px-4 py-2 text-center bg-yellow-400 text-black rounded-md"
               >
                 Login
-              </NavLink>
+              </Link>
             )}
           </div>
         </div>

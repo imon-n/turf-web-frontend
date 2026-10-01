@@ -1,0 +1,1 @@
+import Register from "../../src/pages/register/Register"; export default function Page(){return <Register/>;}

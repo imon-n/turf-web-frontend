@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router";
+import Link from "next/link";
 import {
   MapPin,
   Search,
@@ -368,7 +370,7 @@ export default function Turfs() {
                   </div>
 
                   <Link
-                    to={`/book-slot/${turf._id}`}
+                    href={`/book-slot/${turf._id}`}
                     className="
                       mt-4 flex w-full items-center justify-center gap-2
                       rounded-lg bg-yellow-400 py-2.5

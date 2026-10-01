@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import Link from "next/link";
 import { MapPin, Star } from "lucide-react";
 import useAxios from "../../hooks/useAxios";
 
@@ -63,7 +65,7 @@ export default function NearbyTurfs() {
           </div>
 
           <Link
-            to="/turfs"
+            href="/turfs"
             className="text-sm font-medium text-gray-700 transition hover:text-black"
           >
             View All →
@@ -166,7 +168,7 @@ export default function NearbyTurfs() {
 
                   {/* Button */}
                   <Link
-                    to={`/book-slot/${turf._id}`}
+                    href={`/book-slot/${turf._id}`}
                     className="
                       block w-full rounded-md bg-yellow-400 py-2.5
                       text-center text-xs font-medium text-black

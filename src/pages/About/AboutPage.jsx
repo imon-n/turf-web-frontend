@@ -90,7 +90,7 @@ export default function About() {
             <div className="relative">
               <div className="overflow-hidden rounded-2xl shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1200&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1200&auhref=format&fit=crop"
                   alt="Football match"
                   className="w-full h-[420px] object-cover"
                 />

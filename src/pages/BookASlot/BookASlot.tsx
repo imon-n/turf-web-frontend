@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { useRouter, useParams } from "next/navigation";
 import { CalendarDays, MapPin, Clock, CreditCard } from "lucide-react";
 
 interface Turf {
@@ -62,7 +64,7 @@ const slots = [
 
 export default function BookASlot() {
   const { turfId } = useParams();
-  const navigate = useNavigate();
+  const navigate = useRouter();
 
   const [turfs, setTurfs] = useState<Turf[]>([]);
   const [loading, setLoading] = useState(true);
