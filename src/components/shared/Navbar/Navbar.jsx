@@ -48,11 +48,7 @@ export default function Navbar() {
             <li key={link.path}>
               <Link
                 href={link.path}
-                className={({ isActive }) =>
-                  `transition-colors duration-300 ${
-                    isActive ? "text-yellow-400" : "hover:text-yellow-400"
-                  }`
-                }
+                className="transition-colors duration-300 hover:text-yellow-400"
               >
                 {link.name.toUpperCase()}
               </Link>
@@ -81,13 +77,7 @@ export default function Navbar() {
                     key={link.path}
                     href={link.path}
                     onClick={() => setIsExploreOpen(false)}
-                    className={({ isActive }) =>
-                      `block px-5 py-3 text-sm transition-colors ${
-                        isActive
-                          ? "bg-yellow-400 text-black"
-                          : "hover:bg-yellow-50 hover:text-yellow-600"
-                      }`
-                    }
+                    className="block px-5 py-3 text-sm transition-colors hover:bg-yellow-50 hover:text-yellow-600"
                   >
                     {link.name}
                   </Link>
